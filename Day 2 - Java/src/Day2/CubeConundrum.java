@@ -23,11 +23,13 @@ public class CubeConundrum {
             String line = inputStream.readLine();
 
             int sum = 0;
+            int power = 0;
 
             while (line != null) {
-                sum += checkLimits(line);
+                // sum += checkLimits(line);
+                power += getMinimum(line);
 
-                System.out.println(sum);
+                System.out.println(power);
                 line = inputStream.readLine();
             }
 
@@ -58,6 +60,43 @@ public class CubeConundrum {
         }
 
         return id;
+    }
+
+    private static int getMinimum(String line){
+
+        HashMap<String, Integer> mins = new HashMap<>();
+
+        line = line.split(":")[1];
+
+        for(String count : line.split(";")){
+
+            for(String cube: count.split(",")) {
+
+                Integer x = Integer.parseInt(cube.split(" ")[1]);
+                String colour = cube.split(" ")[2];
+
+                if(mins.get(colour) == null){
+                    mins.put(colour, x);
+                }else{
+
+                    if(mins.get(colour) < x){
+                        mins.replace(colour, x);
+                    }
+
+                }
+
+
+
+            }
+        }
+
+        int power = 1;
+
+        for(String colour: mins.keySet()){
+            power *= mins.get(colour);
+        }
+
+        return power;
     }
 
 }
