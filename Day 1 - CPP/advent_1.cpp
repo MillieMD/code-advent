@@ -51,7 +51,7 @@ int main(int argc, char* argv[]){
 
         while(std::getline(input,line)){
             int c = getCalibrationData(line);
-            output << c;
+            output << c << "\n";
             std::cout << c << "\n";
 
         }
