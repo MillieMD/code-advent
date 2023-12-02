@@ -4,13 +4,13 @@ The [Advent of Code](https://adventofcode.com/) challenges, each written in a ra
 ### Days:
 
 - 1: Trebuchet?! (C++)
-- 2: Cube Conundrum (C#)
+- 2: Cube Conundrum (Java)
 
 ### Languages:
 - [x] C++
-- [ ] Java
+- [x] Java
 - [ ] Python
-- [x] C#
+- [ ] C#
 - [ ] C
 - [ ] Pascal
 - [ ] Rust
