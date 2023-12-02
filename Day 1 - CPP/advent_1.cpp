@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <fstream>
+#include <sstream>
 
 int getCalibrationData(const std::string& line){
 
@@ -20,6 +21,7 @@ int getCalibrationData(const std::string& line){
                 last = c;
             }
         }
+
     }
 
     if(last == 0){
