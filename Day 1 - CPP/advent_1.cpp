@@ -42,33 +42,24 @@ int main(int argc, char* argv[]){
     std::ifstream input(argv[1]);
     std::string line;
 
-    std::fstream output;
-    output.open("output.txt", std::ios::out);
+    if(input.is_open()){
 
-    if(input.is_open() && output.is_open()){
-
+        int sum = 0;
         std::cout << "Calibrating..." << "\n";
 
         while(std::getline(input,line)){
             int c = getCalibrationData(line);
-            output << c << "\n";
-            std::cout << c << "\n";
 
+            sum += c;
+            std::cout << c << "\n";
         }
 
+        std::cout << "Sum of calibration data: " << sum << std::endl;
         input.close();
-        output.close();
 
     }else{
 
-        if(!input.is_open()){
-            std::cerr << "Could not open file at directory: " << argv[1] << std::endl;
-        }
-
-        if(!output.is_open()){
-            std::cerr << "Could not create file at directory: output.txt" << std::endl;
-        }
-
+        std::cerr << "Could not open file at directory: " << argv[1] << std::endl;
         return 1;
     }
 
