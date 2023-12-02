@@ -1,0 +1,1 @@
+Combine first digit and last digit of given string to create 2 digit number
