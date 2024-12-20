@@ -1,6 +1,6 @@
-# code-advent
+# code-advent (archived)
 
-lol gave up + archived soz :P
+**lol gave up + archived soz :P**
 
 The [Advent of Code](https://adventofcode.com/) challenges, each written in a randomly chosen language
 
