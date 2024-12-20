@@ -1,4 +1,7 @@
 # code-advent
+
+lol gave up + archived soz :P
+
 The [Advent of Code](https://adventofcode.com/) challenges, each written in a randomly chosen language
 
 ### Days:
